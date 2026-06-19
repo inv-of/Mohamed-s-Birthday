@@ -156,7 +156,7 @@ section{
 }
 
 .video-btn:hover{
-    background:#5b3b7a;
+    opacity:.9;
 }
 
 #videoBox{
@@ -419,6 +419,16 @@ setTimeout(()=>{
     container.remove();
 },8000);
 
+</script>
+
+<script>
+function showVideo() {
+    const videoBox = document.getElementById("videoBox");
+    const video = videoBox.querySelector("video");
+
+    videoBox.style.display = "block";
+    video.play();
+}
 </script>
 
 </body>
