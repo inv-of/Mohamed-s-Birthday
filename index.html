@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed's Birthday</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #faf6ff,
+        #f1e6ff,
+        #e9d8ff
+    );
+}
+
+.container{
+    width:min(90%,500px);
+    text-align:center;
+}
+
+.special-day{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:clamp(30px,5vw,50px);
+}
+
+.special-day span{
+    width:clamp(50px,12vw,90px);
+    height:1px;
+    background:#8f7aa8;
+}
+
+.special-day p{
+    font-size:clamp(12px,2vw,16px);
+    letter-spacing:4px;
+    color:#7b688f;
+}
+
+h1{
+    font-family:Georgia,serif;
+    font-weight:700;
+    line-height:1.05;
+
+    font-size:clamp(3rem,8vw,5.5rem);
+    color:#4f2357;
+
+    margin-bottom:20px;
+}
+
+h1 span{
+    color:#b267ff;
+    font-style:italic;
+}
+
+.subtitle{
+    font-size:clamp(1rem,3vw,1.4rem);
+    color:#8a729e;
+    font-style:italic;
+    margin-bottom:clamp(50px,8vw,90px);
+}
+
+.start-btn{
+    text-decoration:none;
+
+    width:100%;
+    max-width:380px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+
+    padding:18px 24px;
+
+    border-radius:999px;
+
+    background:#7c3aed;
+    color:white;
+
+    font-size:clamp(1rem,3vw,1.3rem);
+    font-weight:700;
+
+    box-shadow:0 10px 30px rgba(124,58,237,.25);
+
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:translateY(-3px);
+    background:#6d28d9;
+}
+
+.start-btn span{
+    font-size:1.4em;
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    body{
+        padding:15px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    .start-btn{
+        padding:16px;
+    }
+}
+
+/* Large screens */
+@media (min-width:1200px){
+
+    .container{
+        max-width:650px;
+    }
+
+    h1{
+        font-size:6rem;
+    }
+}
+
+/* الخلفية المتحركة */
+.floating-bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.floating-bg span{
+    position:absolute;
+    bottom:-80px;
+    font-size:0.8rem;
+    opacity:.45;
+    animation: floatUp linear infinite;
+}
+
+/* أماكن مختلفة */
+.floating-bg span:nth-child(1){
+    left:5%;
+    animation-duration:12s;
+}
+
+.floating-bg span:nth-child(2){
+    left:15%;
+    animation-duration:15s;
+    font-size:1.2rem;
+}
+
+.floating-bg span:nth-child(3){
+    left:25%;
+    animation-duration:11s;
+}
+
+.floating-bg span:nth-child(4){
+    left:38%;
+    animation-duration:18s;
+    font-size:0.9rem;
+}
+
+.floating-bg span:nth-child(5){
+    left:50%;
+    animation-duration:14s;
+}
+
+.floating-bg span:nth-child(6){
+    left:62%;
+    animation-duration:16s;
+}
+
+.floating-bg span:nth-child(7){
+    left:72%;
+    animation-duration:13s;
+}
+
+.floating-bg span:nth-child(8){
+    left:82%;
+    animation-duration:17s;
+    font-size:1.1rem;
+}
+
+.floating-bg span:nth-child(9){
+    left:90%;
+    animation-duration:12s;
+}
+
+.floating-bg span:nth-child(10){
+    left:97%;
+    animation-duration:20s;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.6;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="special-day">
+            <span></span>
+            <p>A SPECIAL DAY</p>
+            <span></span>
+        </div>
+
+        <h1>
+            Today is <br>
+            <span>My Sunshine's</span> <br>
+            Birthday
+        </h1>
+
+        <p class="subtitle">
+            ✨ Let the celebration begin
+        </p>
+
+        <a href="main.html" class="start-btn">
+            ابدأ الكويز
+            <span>←</span>
+        </a>
+
+    </div>
+<div class="floating-bg">
+    <span>🌷</span>
+    <span>🌷</span>
+    <span>🌸</span>
+    <span>🌷</span>
+    <span>🌷</span>
+    <span>🌸</span>
+    <span>🌷</span>
+    <span>🌷</span>
+</div>
+</body>
+</html>
