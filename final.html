@@ -232,6 +232,18 @@ video{
     }
 }
 
+.video-card{
+    width:85%;
+    max-width:400px;
+    margin:auto;
+}
+
+.video-card video{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(124,58,237,.15);
+}
+
 </style>
 </head>
 <body>
@@ -338,29 +350,18 @@ Your future wife,
 
 <!-- SECTION 3 -->
 
-<section class="video-section">
+<h1 class="section-title">
+    💜 For my special person
+</h1>
 
-    <h1 class="section-title">
-        💜For my special person
-    </h1>
+<div class="video-card">
 
-    <div class="video-card">
+    <video controls>
+        <source src="video.MP4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-        <button class="video-btn" onclick="showVideo()">
-            اضغط لمشاهدة الفيديو 
-        </button>
-
-        <div id="videoBox">
-
-            <video controls>
-                <source src="video.mp4" type="video/mp4">
-            </video>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 <script>
 
